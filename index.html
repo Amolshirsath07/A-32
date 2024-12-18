@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Assignment 32</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Dice Roller</h1>
+        <img src="/img/one.png" class="img-dice" id="img-dice">
+        <button class="btn" onclick="rolldice()">Press</button>
+    </div>
+    <script>
+        function rolldice() {
+            const min = 1;
+            const max = 6;
+            const random = Math.round(Math.random() * (max - min)) + min;
+            const diceimg = document.getElementById('img-dice');
+            if (random == 1) {
+                diceimg.src = '/img/one.png';
+            }
+            else if (random == 2) {
+                diceimg.src = '/img/two.png';
+            } else if (random == 3) {
+                diceimg.src = '/img/three.png';
+            } else if (random == 4) {
+                diceimg.src = '/img/four.png';
+            } else if (random == 5) {
+                diceimg.src = '/img/five.png';
+            } else if (random == 6) {
+                diceimg.src = '/img/six.png';
+            }
+        }
+    </script>
+</body>
+</html>
